@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <style>
     * {
-        background-color: #FAEBD7
+        background-color: #FAEBD7;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav {
+        padding: 0.75rem 2rem;
+        background-color: #222;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #E63B17;
+    }
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
+        }
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+        }
+        nav li {
+            padding: 0.5rem 0;
+        }
     }
 </style>
+<nav>
+    <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="cabinets.html">Cabinets</a></li>
+  <li><a href="bars.html">Bars</a></li>
+    </ul>
+</nav>
 <body>
         <p>pictures of cabinets will go here</p>
 </body>
