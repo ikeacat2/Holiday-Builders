@@ -46,18 +46,53 @@
     #section1 {
         background-color: #FAEBD7;
     }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .gallery img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3)
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #555;
+    }
 </style>
 <nav>
     <ul>
   <li><a href="index.html">Home</a></li>
-  <li><a href="cabinets.html">Cabinets</a></li>
-  <li><a href="bars.html">Bars</a></li>
+  <li><a href="bars.html">Restaurants & Businesses</a></li>
+  <li><a href="cabinets.html">Residential</a></li>
     </ul>
 </nav>
 <body>
     <section id = "section1">
-        <p>pictures of cabinets will go here</p>
-        <br>
+        <div style ="text-align: center;">
+            <br>
+            <h1>Residential Image Gallery</h1>
+            <br>
+            <h3>Cabinets and Dressers</h3>
+        </div>
+        <div class="gallery">
+            <img src="residential1.png">
+            <img src="residential2.png">
+            <img src="residential3.png">
+            <img src="residential4.png">
+        </div>
     </section1>
+    <footer>© 2025 Brian Holiday</footer>
 </body>
 </html>

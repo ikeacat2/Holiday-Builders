@@ -1,101 +1,191 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+<head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<head>
-    <title>Holiday Builders Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        nav {
-            padding: 0.75rem 2rem;
-            background-color: #222;
-            color: white;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #E63B17;
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-                display: flex;
-            }
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-            }
-            nav li {
-                padding: 0.5rem 0;
-            }
-        }
-        body {
-            font-family: "Georgia", sans-serif;
-        }
-        #section1 {
-            background-color: #E63B17;
-            padding: 20px;
-        }
-        #section2 {
-            background-color: #222;
-            color: #FAEBD7;
-            padding: 20px;
-        }
-        #intro img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #555;
-        }
-    </style>
+<title>Holiday Builders</title>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: Georgia, serif;
+        background-color: #faf7f2;
+        color: #333;
+    }
+
+    nav {
+        background-color: #222;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #E63B17;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 2rem 1rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        background-color: #E63B17;
+        color: white;
+        padding: 3rem 0;
+    }
+
+    .hero-content {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .headshot {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* PROCESS CARDS */
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        background: #FAEBD7;
+        padding: 1.2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .feature-card img {
+        width: 130px;
+        height: 130px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-top: 0.8rem;
+    }
+    .works {
+        background-color: #222;
+        color: #FAEBD7;
+        padding: 2rem 0;
+    }
+
+    .works-grid {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+
+    .works-grid img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+        color: #666;
+    }
+</style>
 </head>
+
+<body>
+
 <nav>
     <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="cabinets.html">Cabinets</a></li>
-  <li><a href="bars.html">Bars</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bars.html">Restaurants & Businesses</a></li>
+        <li><a href="cabinets.html">Residential</a></li>
     </ul>
 </nav>
-<body>
-    <section id="section1"> 
-        <h1>Holiday Builders</h1>
-        <br>
-        <div id="intro">
-            <img src="headshot.jpg" alt="Brian Holiday headshot">
+
+<section class="hero">
+    <div class="container hero-content">
+        <img src="headshot.jpg" class="headshot" alt="Brian Holiday headshot">
+
+        <div>
+            <h1>Holiday Builders</h1>
+            <p>Hi, I'm Brian Holiday. I build quality homes with care, precision, and craftsmanship.</p>
+            <p><strong>Email:</strong> <a href="mailto:brianhldy@yahoo.com" style="color: #fff;">brianhldy@yahoo.com</a></p>
+            <p><strong>Phone:</strong> (707) 799-2750</p>
         </div>
-        <p>Hi, I'm Brian Holiday. My mission is to build quality homes with care and precision.</p>
-        <p>Contact me: <a href = "mailto:brianhldy@yahoo.com">brianhldy@yahoo.com</a></p>
-    </section>
-    <section id="section2"> 
-        <h1>Previous Works</h1>
-        bars cabinets
-    </section>
-    <footer>© 2025 Brian Holiday</footer>
+    </div>
+</section>
+
+<section class="container">
+    <h2 style="text-align: center; margin-bottom: 1rem;">What Makes Our Process Special</h2>
+
+    <div class="features">
+        <div class="feature-card">
+            <strong>Can build from only a sketch</strong>
+            <img src="sketch.png" alt="Sketch example">
+        </div>
+
+        <div class="feature-card">
+            <strong>Work with you until you're satisfied</strong>
+        </div>
+
+        <div class="feature-card">
+            <strong>Transparent communication</strong><br>
+            From start to finish
+        </div>
+
+        <div class="feature-card">
+            <strong>Creativity-driven</strong><br>
+            Solutions built around your ideas
+        </div>
+
+        <div class="feature-card">
+            <strong>Anything you can imagine, we can build</strong>
+            <img src="finished_sketch.png" alt="Finished project">
+        </div>
+    </div>
+</section>
+
+<section class="works">
+    <div class="container">
+        <h2>Previous Works</h2>
+        <div class="works-grid">
+            <img src="example1.jpg" alt="">
+            <img src="example2.jpg" alt="">
+            <img src="example3.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<footer>© 2025 Brian Holiday</footer>
 </body>
-</html> 
+</html>

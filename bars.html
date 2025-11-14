@@ -48,7 +48,7 @@
     }
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1f2));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
         padding: 20px;
         max-width: 1200px;
@@ -56,7 +56,7 @@
     }
     .gallery img {
         width: 100%;
-        height: 250px;
+        aspect-ratio: 1/1;
         object-fit: cover;
         border-radius: 10px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -74,16 +74,35 @@
 <nav>
     <ul>
   <li><a href="index.html">Home</a></li>
-  <li><a href="cabinets.html">Cabinets</a></li>
-  <li><a href="bars.html">Bars</a></li>
+  <li><a href="bars.html">Restaurants & Businesses</a></li>
+  <li><a href="cabinets.html">Residential</a></li>
     </ul>
 </nav>
 <body>
     <section id = "section1">
-        <p>Pictures of bars will go here</p>
-        <br>
+        <div style ="text-align: center;">
+            <br>
+            <h1>Businesses Image Gallery</h1>
+        </div>
         <div class="gallery">
-            <img src="headshot.jpg">
+            <img src="bar1.png">
+            <img src="bar2.png">
+            <img src="bar3.png">
+        </div>
+         <div style ="text-align: center;">
+            <br>
+            <h3>The County Bench</h3>
+            <br>
+        </div>
+        <div class="gallery">
+            <img src="countyb1.png">
+            <img src="countyb2.png">
+            <img src="countyb3.png">
+            <img src="countyb4.png">
+            <img src="countyb5.png">
+            <img src="countyb6.png">
+            <img src="countyb7.png">
+            <img src="countyb8.png">
         </div>
     </section1>
     <footer>© 2025 Brian Holiday</footer>
